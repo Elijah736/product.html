@@ -1,0 +1,256 @@
+.body{
+    background-color:#e2be71;
+    animation-name: slideLeft;
+    animation-duration: 2s;
+}
+
+
+.hero{
+    text-align: center;
+    margin-bottom: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    animation-name: colorChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: background-color 0.4s ease;
+}
+
+.hero button{
+    animation: pulse 2s infinite;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin: 10px;
+}
+
+.hero:hover{
+    animation-play-state: paused;
+}
+
+.Container img{
+    width: auto;
+    height: 150px;
+}
+
+@keyframes rotate{
+    100%{transform: rotateY(360deg);}
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.08);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.navbar{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #808080;
+    margin-bottom: 100px;
+    padding: 5px;
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    animation-name: colorChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: background-color 0.4s ease;
+}
+
+.navbar input{
+    margin-top: 28px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.fa-square-facebook{
+    width: 30px;
+    height: auto;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fa-square-facebook:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.hero input{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fa-twitter{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 30px;
+    height: auto;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.fa-twitter:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+
+
+.navbar:hover{
+    animation-play-state: paused;
+}
+
+.navbar > div{
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.navbar:hover h3{
+    cursor: pointer;
+}
+
+.block{
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #cea54e;
+    padding: 8px;
+    margin-left: 600px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: auto;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.block h3{
+    text-align: center;
+}
+    
+
+.Container {
+    display: grid;
+    gap: 90px;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+}
+
+.Container button{
+    margin: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.Container img{
+    width: auto;
+    height: 150px;
+}
+
+.Container > div{
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #cea54e;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    color: white;
+    border: 1px solid black;
+}
+
+@keyframes slideLeft{
+    from{transform: translateX(100px);}
+}
+
+@keyframes slideLeft{
+    from{transform: translateX(400%);}
+}
+
+
+@keyframes colorChange{
+    0%{background-color: hsl(143, 100%, 30%);}
+    20%{background-color: hsl(143, 84%, 25%);}
+    40%{background-color: hsl(143, 100%, 20%);}
+    60%{background-color: hsl(143, 100%, 15%);}
+    80%{background-color: hsl(143, 100%, 20%);}
+    100%{background-color: hsl(143, 100%, 25%);}
+}
+
+
+.Container > div:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+button{
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #797878;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .Container {
+        grid-template-columns:repeat(2, 300px)
+    }
+}
+
+@media (max-width: 480px) {
+    .Container {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+.loading button {
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-top-color: 5px solid transparent;
+    cursor: pointer;
+    transition: border 0.1s ease;
+    border-radius: 50%;
+}
+
+.loading:active {
+    opacity: 1;
+    border-top: 5px solid #3498db;
+    animation: spin 3s linear infinite;
+}
+        
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
